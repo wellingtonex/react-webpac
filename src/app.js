@@ -1,12 +1,23 @@
-'use strict'
-
 import  React, { Component } from  'react';
-import Title from './title';
+import Squere from './squere';
+import Button from './button'
 
 class App extends Component {
+
+    clicou = () => {
+        alert('clicou')
+    }
+
     render () {
         return (
-            <div><Title name='Wellington' lastname="Siqueirra" /></div> 
+            <div className='container' onClick={this.clicou}>
+                
+                <Button>
+                    <span>Texto 1</span>
+                    <span>Texto 1</span>
+                </Button>
+                
+            </div> 
         )
     }
 }

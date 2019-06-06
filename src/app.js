@@ -1,6 +1,8 @@
 import  React, { Component } from  'react';
 import Squere from './squere';
 import Button from './button'
+import LikeButton from './like-button';
+import SearchButton from './search-button.1';
 
 class App extends Component {
 
@@ -12,10 +14,8 @@ class App extends Component {
         return (
             <div className='container' onClick={this.clicou}>
                 
-                <Button>
-                    <span>Texto 1</span>
-                    <span>Texto 1</span>
-                </Button>
+                <LikeButton>Like</LikeButton>
+                <SearchButton>Bustar</SearchButton>
                 
             </div> 
         )

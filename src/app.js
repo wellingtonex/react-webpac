@@ -6,17 +6,30 @@ import SearchButton from './search-button.1';
 
 class App extends Component {
 
-    clicou = () => {
-        alert('clicou')
+    constructor() {
+        super();
+        this.state = {
+            color: 'green'
+        };
+        console.log('Construido');
+    }
+
+    componentWillMount() {
+        console.log('componentWillMount');
+    }
+    
+    componentDidMount() {
+        console.log('componentDidMount');
     }
 
     render () {
+        console.log('render');        
         return (
-            <div className='container' onClick={this.clicou}>
-                
-                <LikeButton>Like</LikeButton>
-                <SearchButton>Bustar</SearchButton>
-                
+            <div>
+                <Squere color={this.state.color}/>
+                {['red', 'green', 'blue'].map((color) => (
+                    <Button key={color} handleClick={() => this.setState({color })}>{color}</Button>
+                ))}
             </div> 
         )
     }

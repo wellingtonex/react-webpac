@@ -11,28 +11,16 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            showTimer:  true,
-            time: 0
+            
         };
         console.log('Construido app');
     }
-
-    componentWillMount() {
-        console.log('componentWillMount app');
-    }
     
-    componentDidMount() {
-        console.log('componentDidMount app');        
-    }
-
     render () {
-        console.log('render app');        
+        //console.log('render app');        
         return (
             <div>
-               <Timer time={this.state.time}/>
-               <button onClick={(() => this.setState({time: this.state.time + 10}))}>
-                   Change props
-                </button>
+               <Button handleClick={() => console.log('clicou')}>Clique em mim</Button>
             </div> 
         )
     }
